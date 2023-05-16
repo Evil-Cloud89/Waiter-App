@@ -1,9 +1,11 @@
-import './App.css';
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Container>
+        <h1>Hello World</h1>
+      </Container>
     </div>
   );
 }
