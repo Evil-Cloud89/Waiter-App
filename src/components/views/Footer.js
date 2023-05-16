@@ -1,7 +1,7 @@
 const Footer = () => {
   return(
     <div>
-      <p>Footer of my Waiter App</p>
+      <p className="text-center text-muted mt-5">Footer of my Waiter App</p>
     </div>
   )
 };
