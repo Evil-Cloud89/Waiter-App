@@ -2,11 +2,16 @@ import { useSelector } from "react-redux";
 import { selectTables } from "../../redux/tablesRedux";
 import { Button, Stack } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import LoadingPage from "./LoadingPage";
 
 const AllTables = () => {
   const tablesInfo = useSelector(selectTables);
 
-  return(
+  if (tablesInfo.length === 0) {
+    return <LoadingPage />;
+  }
+
+  return (
     <div>
       {tablesInfo.map(({ id, status }) => (
         <div key={id}>
@@ -25,5 +30,3 @@ const AllTables = () => {
 };
 
 export default AllTables;
-
-
